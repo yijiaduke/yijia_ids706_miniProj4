@@ -1,21 +1,25 @@
-# yijia_ids706_miniProj1
+# yijia_ids706_miniProj4
+
+## CI/CD Badge
+[![CI](https://github.com/yijiaduke/yijia_ids706_miniProj4/actions/workflows/hello.yml/badge.svg)](https://github.com/yijiaduke/yijia_ids706_miniProj4/actions/workflows/hello.yml)
 
 ## Python Template
 
-This project is a Python project skeleton that includes a development container setup, a Makefile, and CI/CD workflows using GitHub Actions.
+This project is a Python project skeleton that uses GitHub Actions with a matrix configuration to test across multiple Python versions.
 
 ## File Structure
 
-- **`.devcontainer/`**: Contains the development container configuration (`devcontainer.json` and a Dockerfile) to ensure a consistent development environment.
 - **`Makefile`**: Provides commands for setup, testing, linting, and formatting the project.
-- **`.github/workflows/`**: Contains CI/CD workflows for GitHub, which trigger actions like setup, linting, and testing when code is pushed to the repository.
+- **`.github/workflows/`**: Contains the CI/CD workflows for GitHub, which trigger actions like setup, linting, and testing when code is pushed to the repository across multiple Python versions.
+- **`main.py`**: Contains simple Python functions for addition and subtraction.
+- **`test_main.py`**: Contains test cases using pytest for the functions in main.py.
 
 ## Setup
 
 ### 1. Clone the Repository
 
 ```bash
-git clone git@github.com:nogibjj/yijia_ids706_miniProj1.git
+git clone git@github.com:yijiaduke/yijia_ids706_miniProj4.git
 ```
 
 ### 2. Open the Repository in Visual Studio Code
@@ -38,8 +42,7 @@ make install
 - make clean: Removes pytest cache.
 
 ## CI/CD Setup
-- Location: .github/workflows/
-- Description: Contains GitHub Actions workflows for CI/CD, which automatically run setup, lint, and test actions on pushes to the GitHub repository.
+- GitHub Actions Workflow
+The project uses a matrix build setup in GitHub Actions to test the code across multiple Python versions (3.7, 3.8, 3.9, and 3.11). The workflow is located in the .github/workflows/ directory.
 
-## CI/CD Badge
-[![CI](https://github.com/nogibjj/yijia_ids706_miniProj1/actions/workflows/hello.yml/badge.svg)](https://github.com/nogibjj/yijia_ids706_miniProj1/actions/workflows/hello.yml)
+
